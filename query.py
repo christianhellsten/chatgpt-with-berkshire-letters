@@ -11,10 +11,13 @@ def load_index():
 
 def query_index(index, question, chain_type='map_rerank'):
     """
-    Default chain type:
+    Default chain types:
     'stuff', 'map_reduce', 'refine', 'map_rerank'
 
     See:
+    https://github.com/hwchase17/langchain/blob/master/langchain/chains/qa_with_sources/stuff_prompt.py
+    https://github.com/hwchase17/langchain/blob/master/langchain/chains/qa_with_sources/map_reduce_prompt.py
+    https://github.com/hwchase17/langchain/blob/master/langchain/chains/qa_with_sources/refine_prompts.py
     https://github.com/hwchase17/langchain/blob/master/langchain/chains/retrieval_qa/base.py#L77-L89
     """
     return index.query_with_sources(question, chain_type=chain_type)
