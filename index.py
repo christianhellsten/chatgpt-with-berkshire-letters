@@ -67,6 +67,5 @@ def index_files(directory=FILES_DIR, html_encoding=HTML_ENC):
     index = VectorstoreIndexCreator(vectorstore_kwargs={"persist_directory": INDEX_DIR}).from_loaders(loaders)
     return index
 
-# Example usage
 if __name__ == "__main__":
     index_files()

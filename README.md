@@ -19,6 +19,10 @@ $ python app.py
 
 ## References
 
+https://blog.langchain.dev/tutorial-chatgpt-over-your-data/
+https://python.langchain.com/en/latest/modules/indexes/getting_started.html#walkthrough
+https://github.com/hwchase17/langchain/blob/master/langchain/indexes/vectorstore.py#L51-L74
+https://github.com/hwchase17/langchain/blob/master/langchain/indexes/vectorstore.py#L21-L48
 https://github.com/hwchase17/langchain/blob/master/langchain/chains/qa_with_sources/stuff_prompt.py
 https://github.com/hwchase17/langchain/blob/master/langchain/chains/qa_with_sources/map_reduce_prompt.py
 https://github.com/hwchase17/langchain/blob/master/langchain/chains/qa_with_sources/refine_prompts.py

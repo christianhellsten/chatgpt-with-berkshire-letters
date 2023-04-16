@@ -131,3 +131,5 @@ dmypy.json
 
 db*
 letters*
+pdfs/
+.chroma
