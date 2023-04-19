@@ -30,7 +30,9 @@ import os
 import logging
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.document_loaders import UnstructuredPDFLoader
-from langchain.document_loaders import UnstructuredHTMLLoader
+from langchain.document_loaders import BSHTMLLoader
+# NOTE: UnstructuredHTMLLoader one can't parse the HTML from Berkshire's website
+# from langchain.document_loaders import UnstructuredHTMLLoader
 
 logging.basicConfig(level=logging.INFO)
 
@@ -56,9 +58,9 @@ def index_files(directory=FILES_DIR, html_encoding=HTML_ENC):
                 # UnstructuredPDFLoader is more accurate, but very slow:
                 # Produces: April 30th at the Qwest for our annual Woodstock for Capitalists
                 #
-                loader = UnstructuredPDFLoader("letters/2004ltr.pdf", mode="elements")
+                loader = UnstructuredPDFLoader(file_path, mode="elements", strategy="fast")
             elif file_ext == '.html':
-                loader = UnstructuredHTMLLoader(file_path, encoding=html_encoding)
+                loader = BSHTMLLoader(file_path, open_encoding=html_encoding)
             else:
                 raise AssertionError(f"Unsupported file type: {file_path}")
             loaders.append(loader)

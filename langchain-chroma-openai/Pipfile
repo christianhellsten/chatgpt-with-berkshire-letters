@@ -16,6 +16,9 @@ beautifulsoup4 = "*"
 requests = "*"
 unstructured = {extras = ["local-inference"], version = "*"}
 detectron2 = {ref = "e2ce8dc", git = "https://github.com/facebookresearch/detectron2.git"}
+streamlit = "*"
+streamlit-chat = "*"
+watchdog = "*"
 
 [dev-packages]
 pylint = "*"
